@@ -44,7 +44,8 @@ df <- df[, c(5, 21, 6:20, 1:4)]
 ## Look up values and change  
 If you need to change the values in a column based on their match in another data frame
 ```r
-# this with match the values from df_1$col_a and df_2$col_a and return the values from df_2$col_b
-# in this case replacing those values in df_1$col_a
-df_1$col_a <- df_2$col_b[match(df_1$col_a, df_2$col_a)]
+# this with match the values from myframe$x and ref$x and return the values from ref$y
+myframe$y <-  ref$y[match(myframe$x,ref$x)]
+# if you want to overwrite the source value
+myframe$x <-  ref$y[match(myframe$x,ref$x)]
 ```
