@@ -19,6 +19,9 @@ d
 #> 1     1   4     7
 #> 2     2   5     8
 #> 3     3   6     9
+
+# you can use colnames too. I think you have to name them all or R will start reusing the names you give
+colnames(df) <- c("A", "B", "C", "D", "E", "F", "G")
 ```
 With ```data.table```  
 ```r
