@@ -22,7 +22,7 @@ Let's say you have a character you want to replace, where some are "a" amd some 
 ```r
 gsub("\\ba\\b",NA,df$col) # the \\b...\\b bounds it. Might could use \\<...\\> too
 ```
-[link](http://stackoverflow.com/questions/6528258/complete-word-matching-using-grepl-in-r)  [link](http://stackoverflow.com/questions/7627170/how-do-i-replace-the-string-exactly-using-gsub)
+[link](http://stackoverflow.com/questions/6528258/complete-word-matching-using-grepl-in-r)  [link](http://stackoverflow.com/questions/7627170/how-do-i-replace-the-string-exactly-using-gsub)  
 If you have blanks `""`
 ```r
 # replace blank with NA
