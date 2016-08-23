@@ -54,3 +54,13 @@ myframe$x <-  ref$y[match(myframe$x,ref$x)]
 cols.num <- c("a","b")
 DF[cols.num] <- sapply(DF[cols.num],as.numeric)
 ```
+## Investigating duplicates in a column
+You can get the rows that show up more than once with
+```r
+# requires dplyr
+df %>% count(col) %>% filter(n > 1)
+```
+If this is saved to a df then that df can be used to filter the main df to see the whole row
+```r
+df_check <-  df1[which(df1$colx %in% df2$colx),] %>% arrange(colx)
+```
