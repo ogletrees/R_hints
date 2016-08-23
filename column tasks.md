@@ -49,7 +49,7 @@ myframe$y <-  ref$y[match(myframe$x,ref$x)]
 # if you want to overwrite the source value
 myframe$x <-  ref$y[match(myframe$x,ref$x)]
 ```
-### change multiple column classes
+## Change multiple column classes
 ```r
 cols.num <- c("a","b")
 DF[cols.num] <- sapply(DF[cols.num],as.numeric)
