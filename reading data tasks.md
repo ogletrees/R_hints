@@ -14,13 +14,13 @@ When you use `read.csv` all of your data is character with quotes, not good. Thi
 ---
 
 You can also see this
-```
+```r
 Warning message:
 In scan(file = file, what = what, sep = sep, quote = quote, dec = dec,  :
   EOF within quoted string
   ```
   when a data point has only one quotation mark. Adding `quote = ""` can get the data in but now all of the quotation marks come too. At this point you probably have to just replace them with `df$col <- gsub('"', '', df$col)`. Alternatively, try a `for` loop
-  ```
+  ```r
   for(i in names(df)){
   df[[i]] <- gsub("\"", "", df[[i]])
 }
