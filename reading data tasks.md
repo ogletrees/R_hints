@@ -25,4 +25,24 @@ In scan(file = file, what = what, sep = sep, quote = quote, dec = dec,  :
   df[[i]] <- gsub("\"", "", df[[i]])
 }
 ```
+## reading data in as a list of dataframes
+If you have a folder of .csv for example, you can bring them is an a list of data frames. Here is how
+```r
+#If the path is different than your working directory
+# you'll need to set full.names = TRUE to get the full
+# paths.
+my_files <- list.files("./folder") # ./ for relative path. 
+my_files <-  paste("./folder/", my_files, sep = "")
+my_files
 
+
+#Further arguments to read.csv can be passed in ...
+all_csv <- lapply(my_files,read.csv) # read.csv, colClasses=...  for eaxample
+
+#Set the name of each list element to its
+# respective file name. Note full.names = FALSE to
+# get only the file names, not the full path.
+names(all_csv) <- gsub(".csv","",
+                       list.files("./folder",full.names = FALSE),
+                       fixed = TRUE)
+```
