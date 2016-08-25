@@ -69,7 +69,7 @@ If this is saved to a df then that df can be used to filter the main df to see t
 ```r
 df_check <-  df1[which(df1$colx %in% df2$colx),] %>% arrange(colx)
 ```
-Another thing, to make a df of the distinct values in a col, and another of the duplicated values
+Another thing, to make a df of the unique (only occur once) values in a col, and another of the duplicated values
 ```r
 df_dup <- df %>% count(col) %>% filter(n > 1)
 df_dup <-  df[which(df$colx %in% df_dup$colx),] %>% arrange(colx)
