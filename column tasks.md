@@ -34,6 +34,11 @@ To change part of a column name
 ```r
 names(df) = sub("replace this","with this",names(df)) 
 ```
+To add to the column name
+```r
+colnames(df) <- paste("pre", colnames(df), sep = "_")  # prefix
+colnames(df) <- paste(colnames(df), "suf", sep = "_")  % suffix
+```
 ### Reorder columns
 ```r
 # order names alphabetically
