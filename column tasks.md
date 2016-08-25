@@ -71,6 +71,9 @@ df_check <-  df1[which(df1$colx %in% df2$colx),] %>% arrange(colx)
 ```
 Another thing, to make a df of the distinct values in a col, and another of the duplicated values
 ```r
-df_distinct <- df %>% distinct(col, .keep_all = TRUE)  # .keep_all=TRUE or else you will just get the col
-df <- df %>% filter(duplicated(col))  # this will only get the second occurance of things that appear more than once
+df_dup <- df %>% count(col) %>% filter(n > 1)
+df_dup <-  df[which(df$colx %in% df_dup$colx),] %>% arrange(colx)
+# and for those values that only show up once
+df_uniq <- df %>% count(col) %>% filter(n == 1)
+df_uniq <-  df[which(df$colx %in% df_uniq$colx),] %>% arrange(colx)
 ```
