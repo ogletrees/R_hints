@@ -77,3 +77,10 @@ df_dup <-  df[which(df$colx %in% df_dup$colx),] %>% arrange(colx)
 df_uniq <- df %>% count(col) %>% filter(n == 1)
 df_uniq <-  df[which(df$colx %in% df_uniq$colx),] %>% arrange(colx)
 ```
+filtering with more than one criteria
+```r
+library(dplyr)
+target <- c("Tom", "Lynn")
+filter(dat, name %in% target)  # equivalently, dat %>% filter(name %in% target)
+```
+[link](http://stackoverflow.com/questions/25647470/filter-multiple-conditions-dplyr)
