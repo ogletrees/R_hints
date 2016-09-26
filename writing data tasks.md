@@ -10,3 +10,4 @@ sink("TheFile.txt")
 # code goes here
 sink()
 ```
+[link] (http://www.cookbook-r.com/Data_input_and_output/Writing_text_and_output_from_analyses_to_a_file/)
