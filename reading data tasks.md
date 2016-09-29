@@ -46,3 +46,19 @@ names(all_csv) <- gsub(".csv","",
                        list.files("./folder",full.names = FALSE),
                        fixed = TRUE)
 ```
+
+You can read in data from the clipboard, eith from Excel or other text files. Varys depnding on OS.
+```r
+# for Windows:
+
+x <- read.delim("clipboard")
+# for Mac OS:
+
+x <- read.delim(pipe(“pbpaste”))
+
+read.table(file = "clipboard", sep = "\t", header=TRUE) # Alternative
+```
+With ```psych``` package
+```r
+x <- read.clipboard()
+```
