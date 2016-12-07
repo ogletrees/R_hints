@@ -13,3 +13,8 @@ df_list <- lapply(df_list, "[", c(2,5))
 # or
 df_list <- lapply(df_list, subset, colname != "0")
 ```
+To get data frames in a list combined into one big data frame
+```
+df.dplyr <- as.data.frame(bind_rows(listOfDataFrames))
+df.dplyr <- bind_rows(listOfDataFrames)
+```
