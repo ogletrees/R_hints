@@ -13,6 +13,6 @@ Then I see that you need to configure git under Terminal with your username and 
 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 ```
 
-Looking that up I see that maube I need xcode tools, doesn't look like I have that installed. Go to Apple and download [Command Line Tools](https://developer.apple.com/download/more/)
+Looking that up I see that maybe I need xcode tools, doesn't look like I have that installed. Go to Apple and download [Command Line Tools](https://developer.apple.com/download/more/)
 
 to be continued...
