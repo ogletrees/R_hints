@@ -15,4 +15,4 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 
 Looking that up I see that maybe I need xcode tools, doesn't look like I have that installed. Go to Apple and download [Command Line Tools](https://developer.apple.com/download/more/)
 
-to be continued...
+So that seemed to do it. Perhaps instructions should have you test whether xcode command line tools are installed first. :)
