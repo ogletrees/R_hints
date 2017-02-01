@@ -1,4 +1,4 @@
-You can put a number of data frame sin a list for both orderly envirinments and to do the same things to multiple data frames easily.
+You can put a number of data frame sin a list for both orderly environments and to do the same things to multiple data frames easily.
 
 If you have a list of data frames you can access things inside.
 ```r
@@ -17,4 +17,16 @@ To get data frames in a list combined into one big data frame
 ```
 df.dplyr <- as.data.frame(bind_rows(listOfDataFrames))
 df.dplyr <- bind_rows(listOfDataFrames)
+```
+Of course, how to get a number of csv's into a data frame list? You likely would also like the data frames to have the name of the file they came from too.
+```r
+# bring all of the csv files in as data frame in a list
+lou_files <- list.files('../data/', pattern = "^Loudoun*", full.names = TRUE)
+
+#Further arguments to read.csv can be passed in ...
+all_lou <- lapply(lou_files,read.csv, stringsAsFactors = FALSE)
+
+#Set the name of each list element to its respective file name. Note full.names = FALSE to get only the file names, not the full path.
+names(all_lou) <- gsub(".csv","", list.files('../data/', pattern = "^Loudoun*", full.names = FALSE), fixed = TRUE)
+
 ```
