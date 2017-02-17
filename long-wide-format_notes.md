@@ -16,5 +16,6 @@ Here's how we transform the data:
 ```r
 reshape(results, idvar="Ind", timevar="yr", direction="wide")
 ```
-
+`idvar` is the identifier, like the participant id who will be assessed many times.  
+`timevar` is the indicator of which treatment or which number of the repeated assessments.
 
