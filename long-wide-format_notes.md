@@ -1,4 +1,4 @@
-So, we have data in a data frmae and it's in long format
+So, we have data in a data frame and it's in long format
 ```r
    Ind yr value val2 val3
 1 Ind1 97     1   21   41
