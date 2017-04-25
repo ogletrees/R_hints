@@ -30,3 +30,8 @@ all_in_list <- lapply(list_of_files,read.csv, stringsAsFactors = FALSE)
 names(all_in_list) <- gsub(".csv","", list.files('../folder/', pattern = ".csv", full.names = FALSE), fixed = TRUE)
 
 ```
+if you want he individual data frame names added in a col
+```r
+library(data.table)
+df.all <- rbindlist(df_list, idcol = "index")
+```
