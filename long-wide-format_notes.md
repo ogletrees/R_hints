@@ -19,3 +19,12 @@ reshape(results, idvar="Ind", timevar="yr", direction="wide")
 `idvar` is the identifier, like the participant id who will be assessed many times.  
 `timevar` is the indicator of which treatment or which number of the repeated assessments.
 
+So sometimes this doesn't work and I get a column with all of the column names smashed together and no values. This is when using `reshape` like the above code. The data I have is like this:
+```r
+# Parcel | Year | Land | Impr | Total
+```
+and I need it as:
+```r
+# Parcel | Land.1 | Impr.1 | Total.1 | Land.2 | Impr.2 | Total.2 | ...
+```
+I resolved it once...
