@@ -27,4 +27,7 @@ and I need it as:
 ```r
 # Parcel | Land.1 | Impr.1 | Total.1 | Land.2 | Impr.2 | Total.2 | ...
 ```
-I resolved it once...
+The issue is tibbles, `reshape` does not like them, so do this
+```r
+df_wide <- reshape(as.data.frame(df), idvar = "id", timevar = "time", direction = "wide")
+```
