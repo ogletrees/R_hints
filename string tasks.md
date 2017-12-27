@@ -18,7 +18,7 @@ If you need a specific formatting, like adding dashes at certain places in a str
 df$col_a <- gsub("(\\d\\d\\d)(\\d\\d\\d)(\\d\\d\\d)(\\d\\d\\d)", "\\1-\\2-\\3-\\4", df$col_a)
 ```
 ### Replace string
-Let's say you have a character you want to replace, where some are "a" amd some are "apple", but you just want to replace "a"
+Let's say you have a character you want to replace, where some are "a" and some are "apple", but you just want to replace "a"
 ```r
 gsub("\\ba\\b",NA,df$col) # the \\b...\\b bounds it. Might could use \\<...\\> too
 ```
@@ -27,4 +27,8 @@ If you have blanks `""`
 ```r
 # replace blank with NA
 df$col <-  gsub("^$|^ $", NA, df$col)
+```
+### replace everything before a space with ""
+```r
+df$x <- sub(".*? (.+)", "\\1", df$y)
 ```
