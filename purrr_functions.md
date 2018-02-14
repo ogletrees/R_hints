@@ -1,4 +1,4 @@
-To read is a bunch of files that are in a folder
+To read in a bunch of files that are in a folder
 ```r
 library(purrr)
 data <- list.files("../folder/", full.names = T) %>% map_df(read.csv, stringsAsFactors =F)
