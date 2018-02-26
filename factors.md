@@ -2,3 +2,4 @@ If the order of the factors is good in the data frame, but they get reordered in
 ```r
  %>% mutate(col = factor(col, col)) # 'col' is the column you want to set the order to
 ```
+https://github.com/STAT545-UBC/Discussion/issues/52
