@@ -14,3 +14,8 @@ by_country <- by_country %>%
   mutate(mean_lifeExp = map(data, ~round(mean(.$lifeExp), 2)), sd_life = map(data, ~round(sd(.$lifeExp), 2)))
   ```
   This produces a list column, so use `unlist()` to get back to a vector. `purr` can do this with another function too I think.
+
+If you have a list of data frames and you want to left join them all on a common key, use this
+```r
+dest <- df_list %>% reduce(left_join, by = "A") # "A" is the col that is the key for all data frames
+```
