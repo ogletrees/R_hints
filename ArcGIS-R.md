@@ -44,3 +44,8 @@ attributes(d)$shape <- NULL
 class(d) <- "data.frame"
 ```
 Now you have the data without the arc.data
+
+To write back. Can overwrite with arg
+```r
+arc.write(path = "path/to/file", data = df, overwrite = TRUE)
+```
