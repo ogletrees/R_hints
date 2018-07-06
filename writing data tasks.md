@@ -23,3 +23,9 @@ capture.output(summary(df), file = "ref_raw values.txt") # just a file name will
 # this will append to the text file. In this case 3 lines
 cat("\ndate\ntest\ntext", file="ref_raw values.txt", append=TRUE, sep = "\n")
 ```
+
+Write a data frame to a text file
+```r
+# example
+capture.output(as.data.frame(dstat), file= paste0("C:/Users/admin/Box Sync/CE_Project/Programming/Analysis2018/task_20180627/", cnty, "_stat.txt"))
+```
