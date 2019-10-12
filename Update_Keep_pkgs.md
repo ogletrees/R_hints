@@ -18,3 +18,9 @@ install.packages(missing)
 update.packages()
 ```
 From https://www.datascienceriot.com/how-to-upgrade-r-without-losing-your-packages/kris/
+
+non-CRAN packages:
+
+devtools::install_github("rmcelreath/rethinking")  
+devtools::install_github("thomasp85/patchwork")  
+
