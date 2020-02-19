@@ -13,3 +13,10 @@ formatTwDate <- function(datestring, format="datetime"){
 ```
 
 from: SMAPPNYU/smappR
+
+
+Converting the Twitter created_at format:
+```r
+df$tdate <- as.Date(df$created_at, format="%a %b %d %H:%M:%S %z %Y")
+df %>% count(tdate) %>% ggplot(aes(tdate, n)) + geom_col()
+```
